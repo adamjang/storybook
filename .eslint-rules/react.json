@@ -1,0 +1,21 @@
+{
+  "no-did-mount-set-state": [
+    "off",
+    "never"
+  ],
+  "react/no-did-mount-set-state": "off",
+  "react/jsx-closing-bracket-location": [
+    "error", {
+      "nonEmpty": "after-props",
+      "selfClosing": "after-props"
+    }
+  ],
+  "react/jsx-no-bind": [
+    "error", {
+      "allowArrowFunctions": true
+    }
+  ],
+  "react/jsx-boolean-value": "off",
+  "react/prefer-stateless-function": "warn",
+  "react/jsx-filename-extension": "off"
+}

@@ -1,0 +1,10 @@
+node_modules/**
+docs/**
+build/**
+lib/**
+webpack/**
+
+src/**/__test/*
+app/**/__test/*
+
+*.min.js

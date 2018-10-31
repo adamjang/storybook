@@ -9,11 +9,14 @@ class Button extends Component {
     const { children } = this.props
 
     return (
-      <button className="ui-button">
+      <button
+        className="ui-button"
+        type="button">
         {children}
       </button>
     )
   }
+
 }
 
 Button.defaultProps = {

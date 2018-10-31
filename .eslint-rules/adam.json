@@ -1,0 +1,38 @@
+{
+  "no-console": [
+    "error", {
+      "allow": ["warn", "error", "log"]
+    }
+  ],
+  "no-debugger": "error",
+  "comma-dangle": ["error", "never"],
+  "semi": ["error", "never"],
+  "padded-blocks": [
+    "error", {
+      "classes": "always",
+      "blocks": "never",
+      "switches": "always"
+    }
+  ],
+  "keyword-spacing": [
+    "error", {
+      "overrides": {
+        "if": {
+          "after": false
+        },
+        "for": {
+          "after": false
+        },
+        "while": {
+          "after": false
+        }
+      }
+    }
+  ],
+  "no-param-reassign": "off",
+  "one-var": "off",
+  "dot-notation": "off",
+  "max-statements": ["error", 30],
+  "import/no-named-as-default": "off",
+  "import/no-named-as-default-member": "off"
+}

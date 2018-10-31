@@ -10,6 +10,6 @@ storiesOf('Button', module)
   ))
   .add('configurable text', () => (
     <Button>
-      {text('Text', 'I am a button')}
+      {text('Text', 'This is a button')}
     </Button>
   ))
