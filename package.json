@@ -2,9 +2,12 @@
   "name": "uikit-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/ui-kit.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "WEBPACK_ENV=build webpack",
+    "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "story-book-build": "build-storybook -c .storybook -o docs"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,35 @@
   "bugs": {
     "url": "https://github.com/adamjang/uikit-boilerplate/issues"
   },
-  "homepage": "https://github.com/adamjang/uikit-boilerplate#readme"
+  "homepage": "https://github.com/adamjang/uikit-boilerplate#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.51",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-info": "^4.0.0",
+    "@storybook/addon-knobs": "^4.0.0",
+    "@storybook/react": "^4.0.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.0.3",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^7.0.0-beta.3",
+    "babel-register": "^7.0.0-beta.3",
+    "css-loader": "^1.0.1",
+    "husky": "^1.1.2",
+    "prop-types": "^15.6.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run build && npm run story-book-build"
+    }
+  }
 }
