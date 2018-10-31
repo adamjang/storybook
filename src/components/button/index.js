@@ -6,12 +6,22 @@ import './index.css'
 class Button extends Component {
 
   render() {
-    const { children } = this.props
+    const {
+      backgroundColor,
+      children
+    } = this.props
+
+    const buttonProps = {
+      className: 'ui-button',
+      type: 'button'
+    }
+
+    if(backgroundColor) {
+      buttonProps.style = { backgroundColor }
+    }
 
     return (
-      <button
-        className="ui-button"
-        type="button">
+      <button {...buttonProps}>
         {children}
       </button>
     )
@@ -20,10 +30,12 @@ class Button extends Component {
 }
 
 Button.defaultProps = {
+  backgroundColor: null,
   children: 'Button'
 }
 
 Button.propTypes = {
+  backgroundColor: PropTypes.string,
   children: PropTypes.string
 }
 
